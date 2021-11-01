@@ -1,0 +1,94 @@
+---
+title: "Xaringan project"
+author: "Alejandro Molina-Moctezuma"
+date: "11/1/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Download the whole project  
+
+Download it from: https://github.com/moctezumaii/Xar_project    
+
+You can download the whole Zip file(click on code, then download Zip file). Make sure that when you extract the zip file, everything is saved in the same place.   
+
+The file (already knitted) is under: Presentation.html. Slides will auto switch every 20 seconds (you can also switch them manually)  
+
+
+## Instructions to run project    
+
+Download Devtools.    
+Go to:
+https://cran.r-project.org/bin/windows/Rtools/    
+  
+and click on download (either 64 or 32 bit), and install it.
+If that doesn't work you can also try:    
+
+```{r, eval=F, echo=T}
+install.packages('devtools')
+```
+
+Install Xaringan. Best way:
+
+```{r, eval=F, echo=T}
+devtools::install_github('yihui/xaringan') 
+```
+
+Alternative:    
+
+```{r, eval=F, echo=T}
+install.packages('xaringan')
+```
+
+
+
+
+## Download fonts:    
+You don't need to download the fonts, as I included them in the folder (they are under assets). So you can skip this step.   
+Here are the instructions, just in case (again, you can skip this step)   
+Download fonts from: https://github.com/garthtarr/sydney_xaringan
+You can download the whole Zip file(click on code, then download Zip file), or you can download the specific files:    
+
+sydney-fonts.css    
+sydney.css    
+mathjax-equation-numbers.html   
+garthtarr/sydney_xaringan       
+
+
+
+## Install other packages    
+```{r, eval=F, echo=T}
+remotes::install_github("mitchelloharawild/icons")
+install.packages("RefManageR")
+install.packages("DT")
+install.packages("tidyverse")
+install.packages("gridExtra")
+install.packages("cowplot")
+```
+  
+Installing the icons might be problematic. If you get an error saying: could not find package 'xxx', then you need to install that package using install.package['xxx']. This may happen for multiple packages, but it should be easy to solve past that.
+  
+## Necessary files    
+Please, do have all of the following files in the same file as the Presentation.Rmd file. This should be the case if you downloaded everything in the same place in your computer.    
+
+Files needed for slide 16:  
+
+* df_comparisions.RDS   
+* Overall_feature_importance.RDS    
+
+Files used in other slides:   
+
+* shot_logs.csv
+* xg_model_2Pts.rds
+* clean.csv   
+
+## Running it
+It should run now. Just click "knit", and it will run. Do note that in the bottom-right corner, there is a timer.      
+After you run it, it will save an html file and the original one will be overwritten. 
+
+
+## Additional help    
+If you need any modifications contact me through Upwork or send an email to amolinamoctezuma@lssu.edu
